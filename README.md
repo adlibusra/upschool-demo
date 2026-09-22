@@ -20,11 +20,24 @@ Uygulama hash tabanlı yönlendirme kullanır (tek `index.html`):
 
 | Rota | Sayfa |
 | --- | --- |
-| `#/home` | Ana sayfa, fotoğraf yükleme ve günün özeti |
+| `#/home` | Günün özeti, sıradaki plan öğünü, fotoğraf yükleme |
+| `#/plan` | 7 günlük örnek diyet listesi, öğünü tek dokunuşla günlüğe ekleme |
 | `#/analyzing` | 5 saniyelik analiz animasyonu |
 | `#/analyze` | Analiz sonucu, besin listesi, makro dağılımı |
-| `#/diary` | Günlük — öğünler, hedef takibi, haftalık grafik |
+| `#/diary` | Günlük — öğünler, su takibi, manuel ekleme, haftalık grafik |
 | `#/profile` | Profil, hedefler ve istatistikler |
+
+## Günlük diyet takibi
+
+- **Diyet planı:** Pazartesi–Pazar için günde 5 öğünlük (~1550-1610 kcal) uygulanabilir liste.
+  Her öğünün porsiyonu, kalorisi ve makroları yazılı. "Yedim" ile günlüğe düşer.
+- **Günlük kayıt:** Öğünler tarih bazlı tutulur; gün seçiciyle son 7 gün gezilir.
+- **Manuel ekleme:** Hazır besin kütüphanesinden seç ya da ad + kalori girerek ekle.
+- **Su takibi:** Günlük bardak hedefi, tıklayarak işaretlenir.
+- **İstatistikler:** Son 7 günün ortalaması, toplam öğün ve kesintisiz takip serisi.
+
+Veriler `localStorage`'da saklanır. Profil sayfasındaki **Günlüğü Sıfırla** ile örnek
+veriler yeniden yüklenir.
 
 ## Dosya yapısı
 
