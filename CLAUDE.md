@@ -12,13 +12,20 @@ Mevcut rotalar:
 
 | Rota | Sayfa |
 | --- | --- |
-| `#/home` | Ana sayfa, fotoğraf yükleme |
+| `#/home` | Ana sayfa, günün özeti, fotoğraf yükleme |
+| `#/plan` | 7 günlük diyet planı |
 | `#/analyzing` | Analiz yükleme ekranı |
 | `#/analyze` | Analiz sonucu |
 | `#/diary` | Günlük |
 | `#/profile` | Profil |
 
 Rotalar [js/app.js](js/app.js) içindeki `ROTALAR` nesnesinde tanımlıdır.
+
+## Veri
+
+Günlük kayıtlar tarih anahtarlı (`YYYY-MM-DD`) olarak `localStorage`'da tutulur:
+`kalorilens-gunluk`, `kalorilens-su`, `kalorilens-profil`. İlk açılışta son 6 gün
+diyet planından tohumlanır; bugün boş başlar.
 
 ## Çalıştırma
 

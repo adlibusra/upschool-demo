@@ -975,6 +975,173 @@ body {
   color: var(--yesil-koyu);
 }
 
+/* ---------- Diyet planı ---------- */
+
+.etiket-kucuk {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gri);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.siradaki-kart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.plan-satir {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--kenar);
+}
+
+.plan-satir:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.plan-bilgi {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-etiket {
+  font-size: 12px;
+  font-weight: 650;
+  color: var(--yesil-koyu);
+  background: var(--yesil-soluk);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.plan-bilgi .ad {
+  font-weight: 650;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.plan-bilgi .porsiyon {
+  font-size: 13px;
+  color: var(--gri);
+  line-height: 1.5;
+}
+
+.plan-makro {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--gri-acik);
+  font-variant-numeric: tabular-nums;
+}
+
+.plan-sag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.ipucu-kart {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ipucu-ikon {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* ---------- Su takibi ---------- */
+
+.su-serit {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.su-bardak {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-kucuk);
+  border: 1px solid var(--kenar);
+  background: var(--zemin);
+  font-size: 20px;
+  cursor: pointer;
+  filter: grayscale(1);
+  opacity: 0.45;
+  transition: filter 0.15s, opacity 0.15s, background 0.15s, border-color 0.15s;
+}
+
+.su-bardak:hover {
+  border-color: var(--protein);
+}
+
+.su-bardak.dolu {
+  filter: none;
+  opacity: 1;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* ---------- Öğün ekleme ---------- */
+
+.chip-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip {
+  border: 1px solid var(--kenar);
+  background: var(--kart);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--metin);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.chip:hover {
+  border-color: var(--yesil);
+  background: var(--yesil-acik);
+}
+
+.ekle-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr auto;
+  gap: 10px;
+}
+
+.ekle-form input,
+.ekle-form select {
+  padding: 11px 14px;
+  border: 1px solid var(--kenar);
+  border-radius: var(--radius-kucuk);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--metin);
+  background: #fff;
+  min-width: 0;
+}
+
+.ekle-form input:focus,
+.ekle-form select:focus {
+  outline: 2px solid var(--yesil-soluk);
+  border-color: var(--yesil);
+}
+
 /* ---------- Bildirim ---------- */
 
 .bildirim {
@@ -1058,5 +1225,28 @@ body {
 
   .bildirim {
     bottom: 84px;
+  }
+
+  .ekle-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ekle-form .btn {
+    grid-column: 1 / -1;
+  }
+
+  .plan-satir {
+    flex-wrap: wrap;
+  }
+
+  .plan-sag {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .siradaki-kart .btn {
+    width: 100%;
   }
 }
